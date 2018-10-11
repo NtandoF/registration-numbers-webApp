@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration-Numbers</title>
+  <link rel="stylesheet" href="css/registration_number.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+
+  <script type="text/x-template" class="regNumberTemplate">
+    {{#each regList}}
+     <li class='{{regClass}}'>{{this}}</li>
+    {{/each}}
+  </script>
+</head>
+
+<body>
+    {{{body}}}
+</body>
+
+</html>

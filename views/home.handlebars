@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/registration.css">
+  <title>Registration Numbers</title>
+</head>
+
+<body>
+   <div class="background-color">
+  <div class="container">
+    
+    <h1 class="head">Registration Numbers</h1>
+    <hr>
+    <div class="row">
+      <div class="buttons">
+        <form action="/reg_numbers" method="POST">
+           <input type="text" name="textInput" placeholder="Enter Registration Number" class="col-3 textInput" value="">
+
+           <button type="submit" class="AddBtn" value="ADD">add</button>
+        </form>
+  
+        <form action="/clear" method="POST">
+           <button type="submit" name="clear" value="clear" class="clear">Reset</button>
+           </form>
+         </div>
+    </div>
+       <div class="flash-red">
+                    {{#if messages.info}}{{messages.info}}{{/if}}
+                </div>
+         <hr>
+        <h3>Select your Town</h3>
+        <div class="dropdown">
+          <form action="/registrationnumber" method="POST">
+            <input type="radio" name="townRadio" value="All "><b>All Towns</b>
+            <input type="radio" name="townRadio" value="CA "><b>Cape Town</b>
+            <input type="radio" name="townRadio" value="CJ "><b>Paarl</b>
+            <input type="radio" name="townRadio" value="CY "><b>Bellville</b>
+            <input type="radio" name="townRadio" value="CAW "><b>George</b>
+
+                            <div class="filter">
+                            <button class="filtering" type="submit">FILTER </button>
+                        </div>
+             </form>
+         </div>
+      </div>
+        <div class="row">
+      {{#each reg}}
+                <div class="displayField">{{reg_numbers}}</div>
+                {{/each}}
+    </div>
+   </div>
+      
+      </form>
+    <div class="registration"></div>
+    </div>
+</div>
+</body>
+
+</html>
