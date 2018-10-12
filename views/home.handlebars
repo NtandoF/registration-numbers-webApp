@@ -15,8 +15,8 @@
     <div class="row">
       <div class="buttons">
         <form action="/reg_numbers" method="POST">
-           <input type="text" name="textInput" placeholder="Enter Registration Number" class="col-3 textInput" value="">
-
+           <input type="text" name="textInput" pattern='[A-Z]{2,3}\s\d{3}\W\d{3}|[A-Z]{2,3}\s\d{2,3}' title="Example: CA 123-345" placeholder="Enter Registration Number" class="col-3 textInput" value="">
+ 
            <button type="submit" class="AddBtn" value="ADD">add</button>
         </form>
   
