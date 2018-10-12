@@ -1,1 +1,1 @@
-web: node index.jsate
+web: node index.js
