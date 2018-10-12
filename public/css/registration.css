@@ -170,6 +170,19 @@ b{
         
     }
 
+    .displayField{
+        font-size: 20px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 7px;
+        background-color: #fffb05;
+        color:rgb(12, 12, 12);
+        border-color: rgb(5, 5, 5);
+        width: 11%;
+        margin: 5px;
+        margin-left: 45%;
+     }
+
   }
   
   
