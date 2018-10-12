@@ -13,18 +13,26 @@
     <h1 class="head">Registration Numbers</h1>
     <hr>
     <div class="row">
-      <div class="buttons">
-        <form action="/reg_numbers" method="POST">
-           <input type="text" name="textInput" pattern='[A-Z]{2,3}\s\d{3}\W\d{3}|[A-Z]{2,3}\s\d{2,3}' title="Example: CA 123-345" placeholder="Enter Registration Number" class="col-3 textInput" value="">
- 
-           <button type="submit" class="AddBtn" value="ADD">add</button>
+      <div class="one column">
+
+      </div>
+       <div class="twelve columns buttons">
+        <form id="add" action="/reg_numbers" method="POST">
+           <input type="text" name="textInput" pattern='[A-Z]{2,3}\s\d{3}\W\d{3}|[A-Z]{2,3}\s\d{2,3}' title="Example: CA 123-345, ca 123-354" placeholder="Enter Registration Number" class="col-3 textInput" value="">
+           <button type="submit" class="AddBtn" form="add" value="ADD">add</button>
+           <button type="submit" name="clear" form="reset" value="clear" class="clear">Reset</button>
         </form>
-  
-        <form action="/clear" method="POST">
-           <button type="submit" name="clear" value="clear" class="clear">Reset</button>
-           </form>
+       </div>
+       <div class="four columns">
+        
+        
+        <form id="reset" action="/clear" method="POST">
+        </form>
+           
+       </div>
+       <div class="two column"></div>
          </div>
-    </div>
+    
        <div class="flash-red">
                     {{#if messages.info}}{{messages.info}}{{/if}}
                 </div>
